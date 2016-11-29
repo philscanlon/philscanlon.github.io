@@ -97,7 +97,7 @@ var TopicSubscriber = function (topicName) {
     subscriber.connectToSolace = function (host) {
         subscriber.log('Connecting to Solace router web transport URL ' + host + '.');
         var sessionProperties = new solace.SessionProperties();
-        sessionProperties.url = 'ws://' + host;
+        sessionProperties.url = 'wss://' + host;
         // NOTICE: the Solace router VPN name
         sessionProperties.vpnName = 'hackathon';
         subscriber.log('Solace router VPN name: ' + sessionProperties.vpnName);
